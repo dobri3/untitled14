@@ -20,35 +20,35 @@ void _resetQuiz(wordList){
 
 void answerQuestion(int selectedAnswerIndex, questionColor, buttonRightColor, buttonWrongColor, BuildContext context){
 if(wordList[currentQuestionIndex].writtenAns == wordList[currentQuestionIndex].rightAns){
-  setState(() {
-    questionColor = Colors.green;
-  });
+  // setState(() {
+  //   questionColor = Colors.green;
+  // });
 
   if (selectedAnswerIndex == 1){
     score++;
   }
   else{
     HapticFeedback.heavyImpact();
-    setState(() {
-      buttonWrongColor = Colors.red;
-    });
+    // setState(() {
+    //   buttonWrongColor = Colors.red;
+    // });
 
 
   }
 }
 if(wordList[currentQuestionIndex].writtenAns != wordList[currentQuestionIndex].rightAns){
-  setState(() {
-    questionColor = Colors.red;
-  });
+  // setState(() {
+  //   questionColor = Colors.red;
+  // });
 
   if (selectedAnswerIndex == 0){
     score++;
   }
   else{
     HapticFeedback.heavyImpact();
-    setState(() {
-      buttonRightColor = Colors.red;
-    });
+    // setState(() {
+    //   buttonRightColor = Colors.red;
+    // });
 
 
   }
@@ -75,11 +75,11 @@ if(wordList[currentQuestionIndex].writtenAns != wordList[currentQuestionIndex].r
 void nextQuestion(BuildContext context, questionColor, buttonRightColor, buttonWrongColor,){
   if (currentQuestionIndex<(wordList.length - 2)){
     currentQuestionIndex++;
-    setState(() {
-      buttonRightColor = Colors.grey;
-      buttonWrongColor = Colors.grey;
-      questionColor = Colors.black;
-    });
+    // setState(() {
+    //   buttonRightColor = Colors.grey;
+    //   buttonWrongColor = Colors.grey;
+    //   questionColor = Colors.black;
+    // });
 
   }
   else{
